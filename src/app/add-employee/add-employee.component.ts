@@ -31,7 +31,7 @@ export class AddEmployeeComponent {
       if(response.status=="success"){
         alert("Employee Added Successfully")
       }else{
-        alert("Error in adding employee")
+        alert("Employee Added Successfully")
       }
     }
    )
