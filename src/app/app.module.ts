@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { AdminNavBarComponent } from './admin-nav-bar/admin-nav-bar.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
 
 const myRoute:Routes = [
   {
@@ -26,7 +27,8 @@ const myRoute:Routes = [
     AppComponent,
     AdminLoginComponent,
     AddEmployeeComponent,
-    AdminNavBarComponent
+    AdminNavBarComponent,
+    AddSecurityComponent
   ],
   imports: [
     BrowserModule,
