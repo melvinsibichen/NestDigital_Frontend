@@ -4,25 +4,31 @@
             <div class="row">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5">
                     <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                        <h1 class="text-primary">Security Login</h1>
+                        <img src="https://www.nestdigital.com/images/logo.svg" height="40" alt="">  
+                        <h1 class="text-dark">SECURITY LOGIN</h1>
                     </div>
                     <div class="row mt-5 g-3">
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <label for="" class="form-label text-secondary">Username</label>
-                            <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Enter username...">
+                            <label for="" class="form-label text-dark">Username</label>
+                            <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="username">
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                            <label for="" class="form-label text-secondary">Password</label>
-                            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Enter password...">
+                            <label for="" class="form-label text-dark">Password</label>
+                            <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="password">
                         </div>
                         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 d-flex justify-content-center mt-5">
-                            <button class="p-2 btn btn-outline-dark mx-3" routerLink="/"><-- Go to Admin Login</button>
-                            <button class="btn btn-primary p-2 mx-3" (click)="readValues()">Security Login --></button>
+                            
+                            <button class="btn btn-success p-2 mx-3" (click)="readValues()">LOGIN</button>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-4 d-flex justify-content-center mt-5">
+                            <button class="p-2 btn btn-outline-success mx-3" routerLink="/">Admin Login</button>
+                            <button class="p-2 btn btn-outline-success mx-3" routerLink="/employeeLogin">Employee Login</button>
+                     
                         </div>
                     </div>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mt-5 d-flex justify-content-center">
-                    <img height="400px" src='assets/images/admin_login.svg' alt="">
+                    <img height="400px" src='https://img.freepik.com/free-vector/global-data-security-personal-data-security-cyber-data-security-online-concept-illustration-internet-security-information-privacy-protection_1150-37372.jpg?size=626&ext=jpg&ga=GA1.2.590903760.1669795998&semt=sph' alt="">
                 </div>
             </div>
         </div>
