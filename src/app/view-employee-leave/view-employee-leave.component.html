@@ -1,4 +1,4 @@
-<app-admin-nav-bar></app-admin-nav-bar>
+<app-empl-navbar></app-empl-navbar>
 <div class="container">
     <div class="row mt-4">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -10,15 +10,12 @@
                     <table class="table justify-content-center table-striped table-bordered mb-5">
                         <thead class="bg-light">
                             <tr>
-                                <th class="text-center" scope="col">Code</th>
-                                <th class="text-center" scope="col">Name</th>
-                                <th class="text-center" scope="col">Type</th>
+                                <th class="text-center" scope="col">Leave Type</th>
                                 <th class="text-center" scope="col">From</th>
                                 <th class="text-center" scope="col">To</th>
-                                <th class="text-center" scope="col">Applied</th>
-                                <th class="text-center" scope="col">Remark</th>
+                                <th class="text-center" scope="col">Remarks</th>
+                                <th class="text-center" scope="col">Apply Date</th>
                                 <th class="text-center" scope="col">Status</th>
-                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -36,19 +33,17 @@
                             </ng-template>
                             <ng-template #dataScreen>
                                 <tr *ngFor="let i of leaves">
-                                    <td class="text-center">{{i.emp_code}}</td>
-                                    <td class="text-center">{{i.name}}</td>
-                                    <td class="text-center">{{i.leave_type}}</td>
-                                    <td class="text-center">{{i.from_date}}</td>
-                                    <td class="text-center">{{i.to_date}}</td>
-                                    <td class="text-center">{{i.apply_date}}</td>
+                                    <td class="text-center">{{i.leaveType}}</td>
+                                    <td class="text-center">{{i.fromDate}}</td>
+                                    <td class="text-center">{{i.toDate}}</td>
                                     <td class="text-center">{{i.remarks}}</td>
-                                    <div *ngIf="i.leave_status==0; then thenBlock else elseBlock"></div>
+                                    <td class="text-center">{{i.applyDate}}</td>
+                                    <div *ngIf="i.leaveStatus==0; then thenBlock else elseBlock"></div>
                                     <ng-template #thenBlock>
                                             <td class="text-center">Pending</td>
                                     </ng-template>
                                     <ng-template #elseBlock>
-                                        <div *ngIf="i.leave_status==1; then thensBlock else elsesBlock"></div>
+                                        <div *ngIf="i.leaveStatus==1; then thensBlock else elsesBlock"></div>
                                             <ng-template #thensBlock>
                                                 <td class="text-center">Approved</td>
                                             </ng-template>
@@ -56,10 +51,6 @@
                                                 <td class="text-center">Rejected</td>
                                             </ng-template>
                                     </ng-template>
-                                    <td style="width: 13rem;" class="text-center">
-                                        <button class="btn btn-success mx-2" (click)="updateStatus(i.id,i.empId,1,i.leave_type,i.from_date,i.to_date)">Approve</button>
-                                        <button class="btn btn-danger" (click)="updateStatus(i.id,i.empId,-1,i.leave_type,i.from_date,i.to_date)">Reject</button>
-                                    </td>
                             </ng-template>
 
                         </tbody>
