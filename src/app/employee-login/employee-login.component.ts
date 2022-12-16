@@ -23,7 +23,7 @@ export class EmployeeLoginComponent {
                     localStorage.setItem("userInfo",response.userInfo)
                     this.route.navigate(["/employeeProfile"])
                 }else{
-                    alert("failed")
+                    alert("failed to Login")
                 }
             }
         )

@@ -24,7 +24,7 @@ export class SecurityLoginComponent {
           localStorage.setItem("userInfo",response.userInfo)
           this.route.navigate(["/viewSecurityProfile"])
         }else{
-          alert("error")
+          alert("error in login")
         }
       }
     )
