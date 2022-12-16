@@ -36,10 +36,10 @@ export class VisitorsLogComponent {
     this.api.addVisExit(data).subscribe(
       (response:any)=>{
         if(response.status=="success"){
-          alert("success")
+          alert("Entry Success")
           window.location.reload()
         }else{
-          alert("failed")
+          alert("Entry failed")
           window.location.reload()
         }
       }
